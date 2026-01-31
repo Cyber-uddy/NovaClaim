@@ -1,0 +1,8 @@
+{
+  "name": "Novaclaim AI 1",
+  "description": "Enterprise-grade AI-driven patent intelligence and innovation strategy platform for corporate R&D and policy analysis.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}

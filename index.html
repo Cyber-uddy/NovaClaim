@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Novaclaim AI | Strategic Intelligence Command</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #F7F5EF; /* Soft Cream White */
+      color: #1F2A2E; /* Charcoal */
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+    h1, h2, h3, h4 {
+      font-family: 'Sora', sans-serif;
+    }
+    
+    /* Login Page - Mid-Teal Premium Vertical Gradient */
+    .bg-command-center {
+      background: linear-gradient(to bottom, #138D86 0%, #0B5E59 100%);
+    }
+
+    /* Technical Grid Overlay */
+    .bg-tech-grid {
+      background-size: 50px 50px;
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    }
+
+    /* Dashboard Backgrounds */
+    .bg-dashboard-main { background-color: #F7F5EF; }
+    .bg-dashboard-grid {
+      background-size: 30px 30px;
+      background-image: 
+        linear-gradient(to right, rgba(15, 185, 177, 0.02) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(15, 185, 177, 0.02) 1px, transparent 1px);
+    }
+
+    /* Login Panel */
+    .elite-glass {
+      background: #FDFEFD;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      box-shadow: 
+        0 20px 50px rgba(0, 0, 0, 0.2),
+        0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    /* -------------------------------------------------------------------------
+       FEATURE MODULE INTERACTION - MOTION PHYSICS (REFINED)
+    ------------------------------------------------------------------------- */
+    
+    .card-feature-enterprise {
+      background: #F3FAF9;
+      border: 1px solid #D6E7E4;
+      border-radius: 12px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+      
+      /* Quick "Return Snap" state */
+      transform: translateY(0) scale(1);
+      
+      /* FAST RESPONSE: Remove lag with tight timing and cubic-bezier */
+      transition: 
+        transform 0.18s cubic-bezier(0.2, 0.8, 0.2, 1), 
+        box-shadow 0.18s ease, 
+        border-color 0.18s ease;
+      
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      
+      /* Hardware Acceleration Hints */
+      will-change: transform;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .card-feature-enterprise:hover {
+      border-color: #12B3A6;
+      
+      /* STRONGER, CRISP BOUNCE LIFT */
+      transform: translateY(-8px) scale(1.045);
+      
+      box-shadow: 
+        0 0 0 1px #12B3A6,
+        0 18px 34px rgba(18, 179, 166, 0.25);
+    }
+
+    /* Top Accent Line for Modules */
+    .module-accent {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #17C3B2, #0F8F87);
+    }
+
+    /* -------------------------------------------------------------------------
+       HEADLINE STYLING - LUMINOUS INTELLIGENCE GRADIENT
+    ------------------------------------------------------------------------- */
+    @keyframes textShimmer {
+      to { background-position: 200% center; }
+    }
+
+    .text-luminous-intel {
+      background: linear-gradient(
+        90deg,
+        #FFFFFF 0%,
+        #D9FFFB 35%,
+        #A6F2EC 60%,
+        #FFFFFF 100%
+      );
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: textShimmer 6s linear infinite;
+      filter: 
+        drop-shadow(0 0 6px rgba(18, 179, 166, 0.35))
+        drop-shadow(0 0 14px rgba(18, 179, 166, 0.15))
+        drop-shadow(0 2px 8px rgba(0,0,0,0.25));
+    }
+
+    /* -------------------------------------------------------------------------
+       BACKGROUND MOTION - INTELLIGENT DATA ENVIRONMENT
+    ------------------------------------------------------------------------- */
+    @keyframes dataNodeDrift {
+      0% { transform: translate(0, 0); opacity: 0.16; }
+      50% { opacity: 0.25; }
+      100% { transform: translate(var(--drift-x), var(--drift-y)); opacity: 0.16; }
+    }
+
+    @keyframes pulseOpacity {
+      0%, 100% { opacity: 0.08; }
+      50% { opacity: 0.22; }
+    }
+
+    @keyframes techLineMove {
+      0% { transform: translateX(-10%) translateY(-5%); opacity: 0; }
+      5% { opacity: 0.04; }
+      95% { opacity: 0.04; }
+      100% { transform: translateX(10%) translateY(5%); opacity: 0; }
+    }
+
+    .animate-data-node {
+      animation: dataNodeDrift var(--duration) ease-in-out infinite;
+      animation-delay: var(--delay);
+    }
+
+    .animate-neural-line {
+      animation: pulseOpacity var(--duration) ease-in-out infinite;
+      animation-delay: var(--delay);
+    }
+
+    .animate-tech-line {
+      animation: techLineMove 35s linear infinite;
+    }
+
+    /* Input Style with Focus Glow */
+    .input-command {
+      background: #FFFFFF;
+      border: 1px solid #E1ECE9;
+      transition: all 0.2s ease;
+    }
+    .input-command:focus {
+      border-color: #12B3A6;
+      box-shadow: 0 0 0 2px rgba(18, 179, 166, 0.2);
+      outline: none;
+    }
+
+    /* Custom Checkbox Indicators */
+    .checkbox-custom {
+      appearance: none;
+      -webkit-appearance: none;
+      width: 16px;
+      height: 16px;
+      border-radius: 4px;
+      border: 1.5px solid #CFE5E2;
+      background: #FFFFFF;
+      cursor: pointer;
+      position: relative;
+      transition: all 0.2s ease;
+      outline: none;
+      margin: 0;
+    }
+    .checkbox-custom:checked {
+      background: #18C4B3;
+      border-color: #18C4B3;
+      box-shadow: 0 0 0 3px rgba(24, 196, 179, 0.15);
+    }
+    .checkbox-custom::after {
+      content: "";
+      position: absolute;
+      left: 4px;
+      top: 1px;
+      width: 5px;
+      height: 9px;
+      border: solid white;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg) scale(0);
+      transition: transform 0.15s cubic-bezier(.2, .8, .2, 1.2);
+    }
+    .checkbox-custom:checked::after {
+      transform: rotate(45deg) scale(1);
+    }
+    
+    .scrollbar-hide::-webkit-scrollbar { display: none; }
+    .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+  </style>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              teal: '#0FB9B1',
+              deepTeal: '#0A7C78',
+              cream: '#F7F5EF',
+              surface: '#FFFFFF',
+              charcoal: '#1F2A2E',
+              muted: '#6B7C80',
+              border: '#E8E4DB',
+              accentTeal: '#145C5E',
+            }
+          }
+        }
+      }
+    }
+  </script>
+<script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "recharts": "https://esm.sh/recharts@^3.7.0",
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.13.0",
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
+    "framer-motion": "https://esm.sh/framer-motion@^11.11.11",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.38.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+  <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>

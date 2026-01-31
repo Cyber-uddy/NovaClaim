@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+spacy
+nltk
+sentence-transformers
+hdbscan
+pandas
+numpy
+pydantic
+python-multipart
