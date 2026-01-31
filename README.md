@@ -214,6 +214,10 @@ Built during a **24-hour hackathon** with focus on:
 * SDG-9 alignment
 
 ---
+Made by : Caffeine&Code 
+@sonilakshita
+@Snowwden-gpa
+
 
 ## 📜 License
 
