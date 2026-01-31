@@ -40,7 +40,7 @@ NLP + Embeddings + Clustering + Gap Logic
 
 ### 🔹 Frontend
 
-* React
+* Typescript
 * Chart.js
 
 ### 🔹 Backend
